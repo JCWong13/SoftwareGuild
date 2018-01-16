@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us form</title>
+    </head>
+    <form action="#" method="post">
+        <table>
+        <div>
+            <td><label id="FirstNameLabel" for="FirstName">First Name:</label></td>
+            <td><input id="FirstName" name="FirstName" Type="Text"/></td>
+        </div>
+    </table>
+        <div>
+                <label id="LastNameLabel" for="LastName">Last Name:</label>
+                <input id="LastName" name="LastName" Type="Text"/>
+        </div>
+        <div>
+                <label id="EmailLabel" for="Email">Email:</label>
+                <input id="Email" name="Email" Type="Text"/>
+        </div>
+    <div>
+        <table>
+        <tr>
+            <td>Type of License</td>
+            <td><input type="radio" name="answer" value="Business" Checked/>Business<br/></td>
+            <td> <input type="radio" name="answer" value="Personal"/>Personal<br/></td>
+        </tr>
+    </table>
+    </div>
+    <div> 
+        Reasons:
+        <select name="reason">
+            <option value="Select a reason">Select a Reason
+            </option>
+            <option value="Software Support">Software Support</option>
+            <option value="Hardware Support">Hardware Support</option>
+            <option value="Information Request">Information Request</option>
+        </select>
+    </div>
+    <table>
+    <div>
+        <tr>
+           <td> <label id="AdditionalLabel" for="Additionalinfo">Additional Information:</label></td>
+    
+            <td><textarea id="additionalinfo" name="AdditionalInformation"></textarea></td>
+        </tr>
+    </div>
+    </table>
+    <div>
+        <input type="checkbox" name="termsofservice" value="I have Read the Terms of Service"/>I have read the Terms of Service.<br/>
+    </div>
+    <div>
+        <input type="Submit" name="Sendrequest" value="Send Request"/><br/>
+         
+    </div>
+    </form>
+</html>
