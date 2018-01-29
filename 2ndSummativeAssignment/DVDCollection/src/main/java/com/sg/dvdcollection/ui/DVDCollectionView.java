@@ -191,7 +191,7 @@ public class DVDCollectionView {
         io.print("=== * Main Menu * ===");
         io.print("1. View all DVDs in Collection");
         io.print("2. Search DVD by title and View DVD's Information");
-        io.print("3. Search DVD Collection By Title");
+        io.print("3. Search DVD Collection By Keyword");
         io.print("4. Add New DVD to Collection");
         io.print("5. Edit DVD Information");
         io.print("6. Remove DVD From Collection");
@@ -207,6 +207,10 @@ public class DVDCollectionView {
 
     public void displayUnknownCommandBanner() {
         io.print("Unknown Command -_- Please Try Again");
+    }
+    
+    public void displayUnknownTitleBanner() {
+        io.print("Unknown Command -_- Back to Main Menu");
     }
 
 }

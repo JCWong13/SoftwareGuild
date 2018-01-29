@@ -99,36 +99,42 @@ public class DVDCollectionController {
         String dvdTitle = view.getdvdTitleChoice();
         DVD dvd = dao.editDVD(dvdTitle);
 
-        do {
-            int choice = view.displaydvdTitleEdit(dvd);
+        if (dvd != null) {
 
-            switch (choice) {
-                case 1:
-                    String releaseDate = view.switchReleaseDate();
-                    dvd.setReleaseDate(releaseDate);
-                    break;
-                case 2:
-                    String mPaaRating = view.switchMpaaRating();
-                    dvd.setMpaaRating(mPaaRating);
-                    break;
-                case 3:
-                    String directorName = view.switchDirectorName();
-                    dvd.setDirectorName(directorName);
-                    break;
-                case 4:
-                    String studio = view.switchStudio();
-                    dvd.setStudio(studio);
-                    break;
-                case 5:
-                    String userRating = view.switchUserNote();
-                    dvd.setUserNote(userRating);
-                    break;
-                default:
-                    view.switchDefault();
-            }
-        } while (view.askUserEditChoice().equalsIgnoreCase("Yes"));
-        dao.overWriteDVD();
-        view.displayEditDVDSuccessBanner();
+            do {
+                int choice = view.displaydvdTitleEdit(dvd);
+
+                switch (choice) {
+                    case 1:
+                        String releaseDate = view.switchReleaseDate();
+                        dvd.setReleaseDate(releaseDate);
+                        break;
+                    case 2:
+                        String mPaaRating = view.switchMpaaRating();
+                        dvd.setMpaaRating(mPaaRating);
+                        break;
+                    case 3:
+                        String directorName = view.switchDirectorName();
+                        dvd.setDirectorName(directorName);
+                        break;
+                    case 4:
+                        String studio = view.switchStudio();
+                        dvd.setStudio(studio);
+                        break;
+                    case 5:
+                        String userRating = view.switchUserNote();
+                        dvd.setUserNote(userRating);
+                        break;
+                    default:
+                        view.switchDefault();
+                }
+            } while (view.askUserEditChoice().equalsIgnoreCase("Yes"));
+            dao.overWriteDVD();
+            view.displayEditDVDSuccessBanner();
+        } else {
+            view.displayUnknownTitleBanner();
+
+        }
     }
 
     private void removeDVD() throws DVDCollectionDaoException {
