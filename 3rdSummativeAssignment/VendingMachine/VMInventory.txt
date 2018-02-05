@@ -1,0 +1,10 @@
+A1::Booleans::0.50::2
+A2::Roller Coaster Tycoon 2::10.00::2
+A3::Nancy Drew Game::20.00::1
+A4::Fountain Pen::500.00::1
+A5::Easter Egg::100.00::1
+B1::Left sock::3.00::5
+B2::Bottle of Covfefe::5.00::5
+B3::Holy Water::3.33::3
+B4::Kitten Tears::6.66::6
+B5::Cup of Ramen::1.00::10
