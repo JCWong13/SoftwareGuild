@@ -9,6 +9,8 @@ import com.sg.vendingmachine.dao.VMInventoryDaoException;
 import com.sg.vendingmachine.dto.Currency;
 import com.sg.vendingmachine.dto.Transaction;
 import com.sg.vendingmachine.dto.User;
+import com.sg.vendingmachine.service.VMInsufficientFundsException;
+import com.sg.vendingmachine.service.VMNoItemInventoryException;
 import com.sg.vendingmachine.service.VMServiceLayer;
 import com.sg.vendingmachine.ui.VMView;
 import java.math.RoundingMode;
@@ -50,12 +52,12 @@ public class VMController {
                         keepGoing = false;
                         break;
                     default:
-                        System.out.println("Unknown Command");
+                        view.displayUnknownCommand();
                 }
             }
 
         } catch (VMInventoryDaoException e) {
-            System.out.println("Goodbye");
+            view.displayGoodByeMessage();
         }
     }
 
@@ -110,15 +112,21 @@ public class VMController {
                 service.calculateDepositPurchaseBalance(currency), currency.getValue(), user.getMoneyDeposited());
     }
 
-    private void purchaseItem() throws VMInventoryDaoException {
-        view.displayVMInventory(service.getVMInventory());
-        String itemLocation = view.displayPurchaseChoice();
+    private void purchaseItem() {
+        try {
+            view.displayVMInventory(service.getVMInventory());
+            String itemLocation = view.displayPurchaseChoice();
 
-        Transaction transaction = service.purchaseItem(itemLocation);
-        if (transaction != null) {
-            view.displaySuccessfulItemPurchase(transaction);
-            view.displayCheckBalance(user.getUserBalance());
+            Transaction transaction = service.purchaseItem(itemLocation);
+
+            if (transaction != null) {
+                view.displaySuccessfulItemPurchase(transaction);
+                view.displayCheckBalance(user.getUserBalance());
+            }
+        } catch (VMInsufficientFundsException | VMNoItemInventoryException | VMInventoryDaoException e) {
+            view.displayExceptionMessage(e);
         }
+
     }
 
     private void showVMInventory() throws VMInventoryDaoException {

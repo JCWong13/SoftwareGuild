@@ -20,6 +20,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -65,7 +66,6 @@ public class VMServiceLayerTest {
         assertEquals(new BigDecimal("10.00"), user.getUserBalance());
         service.calculateAddUserBalance(Currency.DOLLAR);
         assertEquals(new BigDecimal("11.00"), user.getUserBalance());
-        user.setUserBalance(new BigDecimal("10.00"));
     }
 
     /**
@@ -78,12 +78,11 @@ public class VMServiceLayerTest {
         service.calculateDepositPurchaseBalance(Currency.QUARTER);
         assertEquals(new BigDecimal("9.75"), user.getUserBalance());
         assertEquals(new BigDecimal("0.25"), user.getMoneyDeposited());
-        user.setMoneyDeposited(new BigDecimal("0"));
-        user.setUserBalance(new BigDecimal("10.00"));
     }
 
     /**
      * Test of getVMInventory method, of class VMServiceLayer.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetVMInventory() throws Exception {
@@ -94,15 +93,16 @@ public class VMServiceLayerTest {
      * Test of purchaseItem method, of class VMServiceLayer.
      */
     @Test
-    public void testPurchaseItem() {
+    public void testPurchaseItem() throws VMInsufficientFundsException, VMNoItemInventoryException, VMInventoryDaoException {
         user.setMoneyDeposited(new BigDecimal("20.00"));
         Transaction transaction = service.purchaseItem("A1");
+
         assertTrue(transaction.getHasChange());
         assertEquals(transaction.getAmountOfFiveDollars(), new BigDecimal("3"));
         assertEquals(transaction.getAmountOfOneDollars(), new BigDecimal("3"));
         assertEquals("Blah", transaction.getItembought().getNameOfItem());
-
     }
+  
 
     private class VMDaoStub implements VMDao {
 

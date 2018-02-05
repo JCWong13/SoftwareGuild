@@ -19,13 +19,11 @@ import java.util.List;
 public interface VMServiceLayer {
 
     BigDecimal calculateAddUserBalance(Currency userChoice);
-    
+
     BigDecimal calculateDepositPurchaseBalance(Currency userchoice);
-    
+
     List<VMItem> getVMInventory() throws VMInventoryDaoException;
-    
-    Transaction purchaseItem(String location);
-    
-    
+
+    Transaction purchaseItem(String location) throws VMInsufficientFundsException, VMNoItemInventoryException, VMInventoryDaoException;
 
 }

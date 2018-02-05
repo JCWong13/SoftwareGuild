@@ -40,6 +40,10 @@ public class VMView {
         io.print("Balance: $" + balance);
 
     }
+    
+    public void displayExceptionMessage(Exception e) {
+        io.print(e.getMessage());
+    }
 
     public void displayAddBalance() {
         io.print("~*~* Add Balance *~*~");
@@ -61,6 +65,10 @@ public class VMView {
     public void displayUnknownCommand() {
         io.print("Unknown Command");
     }
+    
+    public void displayGoodByeMessage() {
+        io.print("~* Goodbye! *~");
+    }
 
     public void displayVMInventory(List<VMItem> inventory) {
         Comparator<VMItem> byLocation = (VMItem o1, VMItem o2)
@@ -71,7 +79,7 @@ public class VMView {
                     if(i.getNumOfItems()!=0) {
                     System.out.println("Location: " + i.getLocationItem()
                             + " <> Name of Item: " + i.getNameOfItem()
-                            + " <> Cost of Object: " + i.getCostOfItem()
+                            + " <> Cost of Item: $" + i.getCostOfItem()
                             + " <> Number of Items Remaining: " + i.getNumOfItems());
                     } });
     }

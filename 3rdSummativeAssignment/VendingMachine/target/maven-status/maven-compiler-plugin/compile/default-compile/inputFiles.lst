@@ -1,0 +1,16 @@
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\service\VMServiceLayerImpl.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VMDaoImpl.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dto\Transaction.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dto\User.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\ui\UserIO.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dto\VMItem.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\service\VMServiceLayer.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\App.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\controller\VMController.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\service\VMNoItemInventoryException.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VMDao.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VMInventoryDaoException.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\dto\Currency.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\ui\UserIOConsoleImpl.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\ui\VMView.java
+C:\Users\janie\OneDrive\Documents\NetBeansProjects\VendingMachine\src\main\java\com\sg\vendingmachine\service\VMInsufficientFundsException.java

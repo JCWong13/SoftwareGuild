@@ -48,8 +48,8 @@ public class VMServiceLayerImpl implements VMServiceLayer {
     }
 
     @Override
-    public Transaction purchaseItem(String location) {
-        try {
+    public Transaction purchaseItem(String location) throws VMInsufficientFundsException, VMNoItemInventoryException, VMInventoryDaoException {
+       
             VMItem item = dao.getItemByLocation(location);
             BigDecimal itemCost = item.getCostOfItem();
             Transaction transaction = new Transaction(item);
@@ -84,11 +84,10 @@ public class VMServiceLayerImpl implements VMServiceLayer {
                 transaction.setAmountOfPennies(changeArray[0]);
                 return transaction;
             }
-
-        } catch (VMInsufficientFundsException | VMNoItemInventoryException | VMInventoryDaoException e) {
-            System.out.println(e.getMessage());
-        }
-        return null;
+    
     }
-
+   
+    
 }
+
+
