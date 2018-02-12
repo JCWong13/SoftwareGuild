@@ -1,0 +1,14 @@
+2018-02-09T14:47:45.562 : purchaseItem: B3
+2018-02-09T15:25:25.412 : purchaseItem: A5
+2018-02-09T15:40:05.476 : purchaseItem: A4
+2018-02-09T16:00:47.152 : purchaseItem: A4
+2018-02-09T16:15:19.475 : purchaseItem: B2
+2018-02-09T18:31:26.510 : purchaseItem: A4
+2018-02-09T19:19:27.508 : purchaseItem: VMInsufficientFundsException: Fountain PenA4
+2018-02-09T19:32:18.747 : purchaseItem : VMInsufficientFundsException: Fountain Pen
+2018-02-09T19:32:43.565 : purchaseItem : VMNoItemInventoryException: Holy Water
+2018-02-09T19:43:06.421 : purchaseItem : VMInsufficientFundsException: Fountain Pen
+2018-02-09T19:43:18.090 : purchaseItem : VMNoItemInventoryException: Holy Water
+2018-02-09T19:43:32.747 : purchaseItem : B5
+2018-02-09T19:51:58.596 : purchaseItem : Cup of RamenB5
+2018-02-09T19:54:57.935 : purchaseItem : Cup of Ramen B5
