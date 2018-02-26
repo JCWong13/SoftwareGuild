@@ -1,0 +1,65 @@
+#VMHeader {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 100px;
+    color: rgb(73, 111, 167);
+}
+.btn {
+    margin: 10px auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: small;
+
+}
+
+.form {
+    margin: 10px auto;
+}
+
+h2{
+    margin: 10px auto;
+    font-family: 'Bungee Shade', cursive;
+    color: orange;
+}
+
+#boxVMItem{ 
+    cursor: pointer;
+    height: 210px;
+    width: 210px;
+	border: 5px solid orange;
+    margin: 20px;
+    background-size: 500px;
+    background-image: url(https://image.freepik.com/free-vector/watercolor-texture-with-soft-tones_1020-997.jpg);
+}
+
+#boxId, #boxName, #boxPrice, #boxQuantity{
+    font-family: 'Bungee Shade', cursive;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(73, 111, 167);
+}
+#boxId{
+    padding-top: 1px;
+}
+
+#boxName {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#boxPrice {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#boxQuantity {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#edit-item-form, #edit-messages-form, #deposit-money-form, #edit-change-form {
+    text-align: center;
+    font-size: medium;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(73, 111, 167);
+}
+
+
