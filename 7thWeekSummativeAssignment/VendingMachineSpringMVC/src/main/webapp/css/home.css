@@ -1,0 +1,94 @@
+#VMHeader {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 100px;
+    color: rgb(73, 111, 167);
+}
+.btn {
+    margin: 18px auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: small;
+    outline: none;
+    color: #fff;
+    background-color: rgb(73, 111, 167);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(211,211,211);
+
+}
+.btn:hover {background-color: orange}
+
+.btn:active {
+    background-color: rgb(73, 111, 167);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#boxVMItem {
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #cccccc;
+}
+
+#boxVMItem:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.form {
+    margin: 5px auto;
+}
+
+h2{
+    margin: 10px auto;
+    font-family: 'Bungee Shade', cursive;
+    color: orange;
+}
+
+#boxVMItem{ 
+    cursor: pointer;
+    height: 210px;
+    width: 210px;
+    border: 5px solid orange;
+    margin: 20px;
+    background-size: 500px;
+    background-image: url(https://image.freepik.com/free-vector/watercolor-texture-with-soft-tones_1020-997.jpg);
+}
+
+#boxId, #boxName, #boxPrice, #boxQuantity{
+    font-family: 'Bungee Shade', cursive;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(73, 111, 167);
+}
+#boxId{
+    padding-top: 1px;
+    text-align: left;
+}
+
+#boxName {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#boxPrice {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#boxQuantity {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#edit-item-form, #edit-messages-form, #deposit-money-form, #edit-change-form {
+    text-align: center;
+    font-size: medium;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(73, 111, 167);
+}
+
+

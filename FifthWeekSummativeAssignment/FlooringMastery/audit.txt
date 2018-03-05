@@ -1,6 +1,0 @@
-2018-02-19T14:57:52.412 : getProductAndStateVerification : FMInvalidStateException
-2018-02-19T15:02:02.523 : getProductAndStateVerification : FMInvalidStateExceptionThose are not valid State initials: MN
-2018-02-19T15:26:28.750 : getAllOrders : FMInvalidOrderException : That is not a Valid Order Date: 1900-02-03
-2018-02-19T15:27:48.018 : getProductAndStateVerification : FMInvalidStateException : Those are not valid State initials: NY
-2018-02-19T15:28:10.641 : getProductAndStateVerification : FMInvalidProductException : That is not a current product sold: gold
-2018-02-19T15:30:04.853 : orderDateAndNumberVerification : FMInvalidOrderException : That is not a valid Order Date/Number 03-08-1900, 2
