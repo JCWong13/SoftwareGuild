@@ -30,7 +30,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class VendingMachineController {
 
     User user;
-    VMDao dao;
     Transaction transaction;
     VMServiceLayer service;
 
@@ -111,7 +110,7 @@ public class VendingMachineController {
             transaction.setTransactionChange("No Change");
         }
         user.setMoneyDeposited(BigDecimal.ZERO);
-        user.setUserSelection("");
+        user.setUserSelection(null);
         transaction.setMessage("");
 
         return "redirect:/";
