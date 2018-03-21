@@ -33,6 +33,9 @@ public class OrganizationDaoDbImpl implements OrganizationDao {
 
     private static final String SQL_DELETE_ORGANIZATION
             = "delete from organization where OrganizationID = ?";
+    
+    private static final String SQL_DELETE_SUPERPERSON_ORGANIZATION_BY_ORGANIZATIONID
+            ="delete from SuperPersonOrganization where OrganizationId =?";
 
     private static final String SQL_UPDATE_ORGANIZATION
             = "update organization set TypeOfOrganization = ?, OrganizationName = ?, "
@@ -96,7 +99,9 @@ public class OrganizationDaoDbImpl implements OrganizationDao {
     }
 
     @Override
+    @Transactional
     public void deleteOrganization(int organizationID) {
+        jt.update(SQL_DELETE_SUPERPERSON_ORGANIZATION_BY_ORGANIZATIONID, organizationID);
         jt.update(SQL_DELETE_ORGANIZATION, organizationID);
     }
 

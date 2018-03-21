@@ -38,6 +38,9 @@ public class SightingDaoDbImpl implements SightingDao {
 
     private static final String SQL_DELETE_SIGHTING
             = "delete from sighting where SightingID = ?";
+    
+    private static final String SQL_DELETE_SUPERPERSON_SIGHTING_BY_SIGHTINGID
+            ="delete from SuperPersonSighting where SightingId = ?";
 
     private static final String SQL_UPDATE_SIGHTING
             = "update sighting set SightingDateTime = ?, "
@@ -101,7 +104,9 @@ public class SightingDaoDbImpl implements SightingDao {
     }
 
     @Override
+    @Transactional
     public void deleteSighting(int sightingID) {
+        jt.update(SQL_DELETE_SUPERPERSON_SIGHTING_BY_SIGHTINGID, sightingID);
         jt.update(SQL_DELETE_SIGHTING, sightingID);
     }
 
