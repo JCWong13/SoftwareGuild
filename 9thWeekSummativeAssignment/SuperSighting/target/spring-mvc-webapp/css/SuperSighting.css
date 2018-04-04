@@ -1,0 +1,62 @@
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+#errorMessages {
+    color: red;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(https://dailypop.files.wordpress.com/2012/04/the-heroic-age-avengers-lineup.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+#SuperSightingTitle{
+    font-family: 'Faster One', cursive;
+    text-shadow: 2px 2px #81817c;
+}
+
+
+b, label, p {
+    font-family: 'Bungee Inline', cursive;
+    color: white;
+    text-shadow: 2px 2px #81817c;
+}
+
+#editSuperPerson hr{
+    margin-right: 55px;
+}
+
+
+#createSuperPerson hr {
+    margin-right: 55px;
+}
+
+#lastTenSightings{
+cursor: pointer;
+}
+
+video {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+#contentOverlay {
+    position: absolute; 
+    top: 20px; 
+    left:200px;
+    margin-bottom: 100px;
+    z-index: 2147483647;
+  }
+
+

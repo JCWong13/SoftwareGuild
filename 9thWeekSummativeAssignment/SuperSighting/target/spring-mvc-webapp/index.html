@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperSighting Web App</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/SuperSighting.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+</head>
+
+<body>
+    <audio id="myAudio">
+        <source src="BagPipes.wav" type="audio/wav">
+    </audio>
+<script>
+    function playAudio() {
+        var x = document.getElementById("myAudio");
+        x.play();
+    }
+</script>
+        <video autoplay muted loop id="myVideo">
+                <source src="ThinSmoke3.mp4" type="video/mp4">
+        </video>
+
+ 
+    <div class="container" id="contentOverlay">
+        <div class="row">
+            <div class="jumbotron">
+            <center><h1 id="SuperSightingTitle">
+            Super Sightings 
+            </h1></center>
+            </div>
+            
+            <ul class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><button onclick="playAudio()" class="btn btn-danger navbar-btn">SuperSightings</button></a>
+                    </div>
+                <ul class="nav navbar-nav">
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="homeButton">Home</button></a></li>
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="superPowersButton">SuperPowers</button></a></li>
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="organizationsButton">Organizations</button></a></li>
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="locationsButton">Locations</button></a></li>
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="sightingsButton">Sightings</button></a></li>
+                <li><a href="#"><button class="btn btn-danger navbar-btn" id="superPeopleButton">SuperPeople</button></a></li>
+                </ul>
+                </div>
+            </ul>
+
+            
+          
+            <ul class="list-group" id="errorMessages"></ul>
+
+            <!--Start of "Main Content" -->
+            <div class="row" id="pageContent">
+
+                <!--Home Page/SuperSightingDescription here-->
+                <div class="col-md-12" id="homePage">
+                    <div class="col-md-4">
+                        <b>Last Ten Sightings</b>
+                        <div id="lastTenSightings">
+    
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <iframe id="locationCoordinates"
+                            width="100%"
+                            height="350px"
+                            frameborder="0" style="border:0"
+                            src="" allowfullscreen>
+                          </iframe>
+                            
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <b>SuperPeople Sighted</b>
+                        <div id="superPeopleList">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--SuperPower Information here -->
+                <div class="col-md-12" id="superPowerPage">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                            <select id="superPowerDropDown">
+
+                            </select>
+                            <input type="button" class="btn btn-danger" id="deleteSuperPowerButton" value="Delete SuperPower">
+                            </div>
+                         <div id="createSuperPower" class="col-md-6">
+                            <form class="form-horizontal form-inline" role="form" id="superPowerForm">
+                                <div class="form-group">
+                                    <label for="createSuperPower" class="control-label">
+                                        Create SuperPower Name:
+                                    </label>
+                                    <input type="text" class="form-control" id="addSuperPowerName"
+                                    placeholder="SuperPower Name" required>
+                                    <input type="button" class="btn btn-danger" id="createSuperPowerButton" value="Create SuperPower">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!--Organizations Information here -->
+                <div class="col-md-12" id="organizationsPage">
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-md-4">
+                                        <select id="organizationDropDown">
+            
+                                        </select>
+                                        <input type="button" class="btn btn-danger" id="deleteOrganizationButton" value="Delete Organization">
+                                </div>
+                                
+
+                                <div id="editOrganization" class="col-md-4">
+                                        <form class="form-horizontal form-inline" role="form" id="organizationForm">
+                                            <div class="form-group"> 
+                                                <label for="createOrganizationType" class="control-label">
+                                                    View/Update Organization:
+                                                </label>
+                                                <hr/>
+                                
+                                                <textarea class="form-control" style="min-width: 100%" id="editOrganizationType"
+                                                placeholder="Type Of Organization" required></textarea>
+                                                <hr/>
+
+                                                <textarea class="form-control" style="min-width: 100%" id="editOrganizationName"
+                                                placeholder="Organization Name" required></textarea>
+                                                <hr/>
+
+                                                <textarea class="form-control" style="min-width: 100%" id="editOrganizationDescription"
+                                                placeholder="Organization Description" required></textarea>
+                                                <hr/>
+                                                <textarea class="form-control" style="min-width: 100%" id="editOrganizationAddress"
+                                                placeholder="Organization Address" required></textarea>
+                                                <hr/>
+                                                <textarea class="form-control" style="min-width: 100%" id="editOrganizationContact"
+                                                placeholder="Organization Contact" required></textarea>
+                                                <hr/>
+                                                <input type="button" class="btn btn-danger" id="editOrganizationButton" value="Update Organization">
+                                               
+                                            </div>
+                                        </form>
+                                </div>
+
+                                <div id="createOrganization" class="col-md-4">
+                                        <form class="form-horizontal form-inline" role="form" id="organizationForm">
+                                            <div class="form-group">
+                                                <label for="createOrganizationType" class="control-label">
+                                                    Create Organization:
+                                                </label>
+                                                <hr/>
+            
+                                                <textarea class="form-control" id="addOrganizationType"
+                                                placeholder="Type Of Organization" required></textarea>
+                                                <hr/>
+
+                                                <textarea class="form-control" id="addOrganizationName"
+                                                placeholder="Organization Name" required></textarea>
+                                                <hr/>
+
+                                                <textarea class="form-control" id="addOrganizationDescription"
+                                                placeholder="Organization Description" required></textarea>
+                                                <hr/>
+                                                <textarea class="form-control" id="addOrganizationAddress"
+                                                placeholder="Organization Address" required></textarea>
+                                                <hr/>
+                                                <textarea class="form-control" id="addOrganizationContact"
+                                                placeholder="Organization Contact" required></textarea>
+                                                <hr/>
+                                                <input type="button" class="btn btn-danger" id="createOrganizationButton" value="Create Organization">
+                                            </div>
+                                        </form>
+                                </div>
+                            
+                            </div>
+                    </div>
+                </div>
+
+                <!--Location Information here-->
+                <div class="col-md-12" id="locationsPage">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                    <select id="locationDropDown">
+        
+                                    </select>
+                                    <input type="button" class="btn btn-danger" id="deleteLocationButton" value="Delete Location">
+                            </div>
+
+                            <div id="editLocation" class="col-md-4">
+                                    <form class="form-horizontal form-inline" role="form" id="locationForm">
+                                        <div class="form-group">
+                                            <label for="viewUpdateLocation" class="control-label">
+                                                View/Update Location:
+                                            </label>
+                                            <hr/>
+        
+                                            <textarea class="form-control" id="editLocationName"
+                                            placeholder="Location Name" required></textarea>
+                                            <hr/>
+
+                                            <textarea class="form-control" id="editLocationDescription"
+                                            placeholder="Location Description" required></textarea>
+                                            <hr/>
+
+                                            <textarea class="form-control" id="editLocationLatitude"
+                                            placeholder="Location Latitude" required></textarea>
+                                            <hr/>
+                                            <textarea class="form-control" id="editLocationLongitude"
+                                            placeholder="Location Longitude" required></textarea>
+                                            <hr/>
+                                            <input type="button" class="btn btn-danger" id="editLocationButton" value="Update Location">
+                                        </div>
+                                    </form>
+                            </div>
+
+                            <div id="createLocation" class="col-md-4">
+                                    <form class="form-horizontal form-inline" role="form" id="locationForm">
+                                        <div class="form-group">
+                                            <label for="createLocation" class="control-label">
+                                                Create Location:
+                                            </label>
+                                            <hr/>
+        
+                                            <textarea class="form-control" id="addLocationName"
+                                            placeholder="Location Name" required></textarea>
+                                            <hr/>
+
+                                            <textarea class="form-control" id="addLocationDescription"
+                                            placeholder="Location Description" required></textarea>
+                                            <hr/>
+
+                                            <textarea class="form-control" id="addLocationLatitude"
+                                            placeholder="Location Latitude" required></textarea>
+                                            <hr/>
+                                            <textarea class="form-control" id="addLocationLongitude"
+                                            placeholder="Location Longitude" required></textarea>
+                                            <hr/>
+                                            <input type="button" class="btn btn-danger" id="createLocationButton" value="Create Location">
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--Sightings Information Here-->
+                <div class="col-md-12" id="sightingsPage">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                             
+                        
+                                    <select style="margin-bottom: 100px" id="sightingDropDown">
+
+                                    </select>
+                                    
+                                    
+                                    <br/>
+                                    <form class="form-horizontal form-inline">
+                                    <b>Search for Sightings By Date: </b>
+                                    <br/>
+                                    <br/>
+                                    <input style ="width:50%" type="text" class="form-control" id="dateForSightings"
+                                    placeholder="Date ex.: yyyyMMdd" required>
+                                  
+                               
+                                    <input type="button" class="btn btn-danger" id="searchSightingsByDateButton" value="Search Sightings">
+
+                                </form>
+                
+                                <select style="width:80%; margin-top: 51px" id="sightingsByDateDropDown" multiple>
+
+                                    </select>
+                            </div>
+
+                            <div id="editSighting" class="col-md-4">
+                                    <form class="form-horizontal form-inline" role="form" id="sightingForm">
+                                        <div class="form-group">
+                                            <label for="viewUpdateSighting" class="control-label">
+                                                View/Update Sighting:
+                                            </label>
+                                            <hr/>
+
+                                            <input style ="width:100%" type="datetime-local" class="form-control" id="editSightingDateTime"
+                                            placeholder="Date ex.: yyyyMMdd" required>
+                                            
+                                            <hr/>
+                                            <b>Location: </b>
+                                            <select id="sightingLocationUpdateDropDown">
+
+                                            </select>
+
+                                            <hr/>
+                                            <b>SuperPeople sighted: </b>
+                                            <select style="width:100%" id="sightingUpdateSuperPeopleDropDown" multiple>
+
+                                            </select>
+
+                                            
+                                            <hr/>
+                                       
+                                            <input style="margin-right: 20px" type="button" class="btn btn-danger" id="editSightingButton" value="Update Sighting"> 
+                                           
+                                            
+                                            <input type="button" class="btn btn-danger" id="deleteSightingButton" value="Delete Sighting">
+                                          
+                                        </div>
+                                    </form>
+                            </div>
+
+                            <div id="createSighting" class="col-md-4">
+                                    <form class="form-horizontal form-inline" role="form" id="sightingForm">
+                                        <div class="form-group">
+                                            <label for="createSighting" class="control-label">
+                                                Create Sighting:
+                                            </label>
+                                            <hr/>
+
+                                            <input style ="width:100%" type="datetime-local" class="form-control" id="addSightingDateTime"
+                                            placeholder="Date ex.: yyyyMMdd" required>
+                                            
+                                            <hr/>
+                                            <b>Location: </b>
+                                            <select id="sightingLocationCreateDropDown">
+
+                                            </select>
+                                            <hr/>
+                                            <b>SuperPeople sighted: </b>
+                                            <select style="width:100%" id="sightingCreateSuperPeopleDropDown" multiple>
+
+                                            </select>
+                                            <hr/>
+                                            <input type="button" class="btn btn-danger" id="createSightingButton" value="Create Sighting">
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+
+                <!--SuperPeople Information here-->
+                <div class="col-md-12" id="superPeoplePage">
+
+                    <div class="container">
+                            <div class="row">
+                                    <div class="col-md-4">
+                                                <select id="superPersonDropDown">
+        
+                                                </select>                    
+                                    </div>
+        
+                                    <div id="editSuperPerson" class="col-md-4">
+                                            <form class="form-horizontal form-inline" role="form" id="superPersonForm">
+                                                <div class="form-group">
+                                                    <label for="viewUpdateSuperPerson" class="control-label">
+                                                        View/Update SuperPerson:
+                                                    </label>
+                                                    <hr/>
+                
+                                                    <textarea class="form-control" style="min-width: 80%" id="editSuperPersonName"
+                                                    placeholder="SuperPerson Name" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <textarea class="form-control" style="min-width: 80%" id="editDescription"
+                                                    placeholder="SuperPerson Description" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <textarea class="form-control" style="min-width: 80%" id="editTypeOfSuperPerson"
+                                                    placeholder="SuperPerson Type" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <b>SuperPerson Power: </b>
+                                                    <br/>
+                                                    <select id="superPersonSuperPowerUpdateDropDown">
+        
+                                                    </select>
+        
+                                                    <hr/>
+                                                    
+                                                    <b>Sightings for SuperPerson: </b>
+                                                    <select style="width:80%" id="superPersonSightingsUpdateDropDown" multiple>
+        
+                                                    </select>
+                                                    <hr/>
+                                                    <b>Organizations for SuperPerson: </b>
+                                                    <select style="width:80%" id="superPersonOrganizationsUpdateDropDown" multiple>
+        
+                                                    </select>
+                                                    
+                                                    <hr/>
+                                                
+                                                    <input style="margin-right: 20px" type="button" class="btn btn-danger" id="editSuperPersonButton" value="Update SuperPerson">
+                                            
+                                                    <input type="button" class="btn btn-danger" id="deleteSuperPersonButton" value="Delete SuperPerson">
+                                                    
+                                                </div>
+                                            </form>
+                                    </div>
+        
+                                    <div id="createSuperPerson" class="col-md-4">
+                                            <form class="form-horizontal form-inline" role="form" id="superPersonForm">
+                                                <div class="form-group">
+                                                    <label for="createSuperPerson" class="control-label">
+                                                        Create SuperPerson:
+                                                    </label>
+                                                    <hr/>
+                
+                                                    <textarea class="form-control" style="min-width: 80%" id="addSuperPersonName"
+                                                    placeholder="SuperPerson Name" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <textarea class="form-control" style="min-width: 80%" id="addDescription"
+                                                    placeholder="SuperPerson Description" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <textarea class="form-control" style="min-width: 80%" id="addTypeOfSuperPerson"
+                                                    placeholder="SuperPerson Type" required></textarea>
+                                                    
+                                                    <hr/>
+
+                                                    <b>SuperPerson Power: </b>
+                                                    <br/>
+                                                    <select id="superPersonSuperPowerCreateDropDown">
+        
+                                                    </select>
+        
+                                                    <hr/>
+                                                    <b>Sightings for SuperPerson: </b>
+                                                    <select style="width:80%" id="superPersonSightingsCreateDropDown" multiple>
+        
+                                                    </select>
+                                                    <hr/>
+                                                    <b>Organizations for SuperPerson: </b>
+                                                    <select style="width:80%" id="superPersonOrganizationsCreateDropDown" multiple>
+        
+                                                    </select>
+                                                    
+                                                    <hr/>
+                                                    <input type="button" class="btn btn-danger" id="createSuperPersonButton" value="Create SuperPerson">
+                                                </div>
+                                            </form>
+                                    </div>
+                                </div>  
+                    </div>
+                </div>
+            </div>
+           
+
+
+         </div>
+           
+        </div>
+   
+    
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/SuperSighting.js"></script>  
+</body>
+
+</html>
