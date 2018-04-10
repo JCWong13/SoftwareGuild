@@ -1,0 +1,1 @@
+This Vending Machine Program is a console application that simulates a vending machine by loading in its inventory from a text file.  The user is able to purchase items and the vending machine prints out the correct amount of change.  This application follows an MVC architectural design.  
