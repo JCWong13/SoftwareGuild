@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" time="0.641" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" time="0.57" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
@@ -64,12 +64,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetAllSuperPowers" time="0.063"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testDeleteSuperPower" time="0.105"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerBySuperPersonID" time="0.078"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testAddSuperPower" time="0.096"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testUpdateSuperPower" time="0.084"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerBySuperPowerName" time="0.083"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testSuperPowerDaoDbImpl" time="0.07"/>
-  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerByID" time="0.062"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetAllSuperPowers" time="0.084"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testDeleteSuperPower" time="0.091"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerBySuperPersonID" time="0.072"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testAddSuperPower" time="0.069"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testUpdateSuperPower" time="0.07"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerBySuperPowerName" time="0.068"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testSuperPowerDaoDbImpl" time="0.053"/>
+  <testcase classname="com.sg.supersighting.dao.SuperPowerDaoDbImplTest" name="testGetSuperPowerByID" time="0.063"/>
 </testsuite>

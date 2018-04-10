@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.sg.supersighting.dao.OrganizationDaoTest" time="0.867" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.sg.supersighting.dao.OrganizationDaoTest" time="0.751" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
@@ -65,9 +65,9 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testDeleteOrganization" time="0.142"/>
-  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetAllOrganizationsBySuperPerson" time="0.173"/>
-  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetAllOrganizations" time="0.135"/>
-  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testUpdateOrganization" time="0.144"/>
-  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testAddOrganization" time="0.141"/>
-  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetOrganizationByID" time="0.132"/>
+  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetAllOrganizationsBySuperPerson" time="0.16"/>
+  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetAllOrganizations" time="0.12"/>
+  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testUpdateOrganization" time="0.112"/>
+  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testAddOrganization" time="0.11"/>
+  <testcase classname="com.sg.supersighting.dao.OrganizationDaoTest" name="testGetOrganizationByID" time="0.107"/>
 </testsuite>
