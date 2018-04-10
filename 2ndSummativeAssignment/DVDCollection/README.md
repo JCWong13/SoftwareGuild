@@ -1,0 +1,1 @@
+This program is a console application that allows a user to add, remove, edit, list all DVDs, display information about a DVD, and load the DVD library from a file as well as save the information back to the file.  It follows a MVC design pattern and also demonstrates dependency injection.
