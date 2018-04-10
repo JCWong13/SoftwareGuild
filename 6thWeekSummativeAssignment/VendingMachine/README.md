@@ -1,0 +1,1 @@
+This Vending Machine program is a web application that allows the user to purchase items and also return correct change.  It will display error messages if the user attempts to purchase items that are no longer present or if they attempt to purchase items without entering in enough money.  It uses HTML, CSS, Javascript, jQuery, and Ajax calls.
