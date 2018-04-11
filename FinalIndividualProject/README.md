@@ -1,0 +1,1 @@
+This capstone individual project is a full-stack MVC-based web application that tracks superhero and supervillain sightings.  It allows the user to perform the basic CRUD operations and was designed RESTfully.  It also implements the Google Map API to display the location of the various SuperPeople sightings.
