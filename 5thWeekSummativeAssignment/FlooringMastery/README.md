@@ -1,0 +1,1 @@
+Flooring Mastery is a console aplication for reading and writing flooring orders for the fictional company SWG Corp.  The application contains a configuration file that switches the program into training or production mode and in addition to implementing MVC design and unit testing, it also showcases Spring dependency injection as well as aspect oriented programming.
