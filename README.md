@@ -1,1 +1,1 @@
-# SoftwareGuild
+The Software Guild Repository contains all the weekly summative assignments which are designed to test the student's technical knowledge of the skills learned during that week.  Each weekly assignment contains its own README file for further explanation.  
